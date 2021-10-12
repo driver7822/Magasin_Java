@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Data
 @NoArgsConstructor
@@ -24,4 +25,8 @@ public class Client {
     private String rue;
     private String num;
     private String tel;
+
+    @OneToMany(mappedBy = "client" , fetch = FetchType.LAZY) //LAZY est la
+    @ToString.Exclude
+    private Collection<Comfact> comfacts;
 }
