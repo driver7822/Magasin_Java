@@ -19,9 +19,6 @@ import java.util.Optional;
 @SpringBootApplication
 public class Victorlorfevreprojet1Application implements CommandLineRunner {
 
-    /*@Autowired
-    private ClientRepository clientRepository;*/
-
     @Autowired
     private ClientServiceImpl clientServiceImpl;
 
@@ -73,7 +70,7 @@ public class Victorlorfevreprojet1Application implements CommandLineRunner {
         if (ocl.isPresent()) System.out.println("Record pas effacé");
         else System.out.println("record effacé");*/
 
-        Client cl = new Client(null,"Lebrun","Marie",1000,"BXL","de la pierre bleue","15","0458/888555",null);
+        /*Client cl = new Client(null,"Lebrun","Marie",1000,"BXL","de la pierre bleue","15","0458/888555",null);
         Comfact cf = new Comfact(null,null, Date.valueOf(LocalDate.now()),"c",new BigDecimal(1000),null);
         try{
             clientServiceImpl.create(cl);
@@ -114,6 +111,6 @@ public class Victorlorfevreprojet1Application implements CommandLineRunner {
         }
         catch (Exception e){
             System.out.println("erreur d'effacement de client "+e);
-        }
+        }*/
     }
 }
