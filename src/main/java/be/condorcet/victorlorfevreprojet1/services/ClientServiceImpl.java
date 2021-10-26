@@ -54,5 +54,10 @@ public class ClientServiceImpl implements InterfClientService {
     public List<Client> read(String nom) {
         return clientRepository.findByNomLike(nom);
     }
+
+    @Override
+    public Client read(String nom, String prenom, String tel) {
+        return clientRepository.findByNomLikeAndPrenomLikeAndTelLike(nom,prenom,tel).stream().findFirst().get();
+    }
 }
 

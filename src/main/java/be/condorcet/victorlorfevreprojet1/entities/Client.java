@@ -1,5 +1,6 @@
 package be.condorcet.victorlorfevreprojet1.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,7 +27,10 @@ public class Client {
     private String num;
     private String tel;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "client" , fetch = FetchType.LAZY) //LAZY est la
     @ToString.Exclude
     private Collection<Comfact> comfacts;
 }
+
+
