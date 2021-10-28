@@ -18,10 +18,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class ClientServiceImplTest {
-    @Autowired
+    /*@Autowired
     private ClientServiceImpl clientServiceImpl;
     @Autowired
-    private ComfactServiceImpl comfactServiceImpl;
+    private ComfactServiceImpl comfactServiceImpl;*/
+
+    @Autowired
+    private InterfComfactService comfactServiceImpl;
+    @Autowired
+    private InterfClientService clientServiceImpl;
+
     Client cl;
     @BeforeEach
     void setUp() {

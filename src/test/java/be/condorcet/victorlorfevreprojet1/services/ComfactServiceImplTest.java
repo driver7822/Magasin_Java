@@ -21,10 +21,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class ComfactServiceImplTest {
     private Client cl;
     private Comfact cf;
+    /*
     @Autowired
     private ClientServiceImpl clientServiceImpl;
     @Autowired
     private ComfactServiceImpl comfactServiceImpl;
+    */
+
+    @Autowired
+    private InterfComfactService comfactServiceImpl;
+    @Autowired
+    private InterfClientService clientServiceImpl;
+
     @BeforeEach
     void setUp() {
         try{

@@ -19,11 +19,11 @@ import java.util.Optional;
 @SpringBootApplication
 public class Victorlorfevreprojet1Application implements CommandLineRunner {
 
-    @Autowired
+    /*@Autowired
     private ClientServiceImpl clientServiceImpl;
 
     @Autowired
-    private ComfactServiceImpl comfactServiceImpl;
+    private ComfactServiceImpl comfactServiceImpl;*/
 
     public static void main(String[] args) {
         SpringApplication.run(Victorlorfevreprojet1Application.class, args);

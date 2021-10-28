@@ -7,6 +7,7 @@ package be.condorcet.victorlorfevreprojet1.webservices;
 
 import be.condorcet.victorlorfevreprojet1.entities.Client;
 import be.condorcet.victorlorfevreprojet1.services.ClientServiceImpl;
+import be.condorcet.victorlorfevreprojet1.services.InterfClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +20,8 @@ import java.util.List;
 public class RestClient {
 
     @Autowired
-    private ClientServiceImpl clientServiceImpl;
-
+    //private ClientServiceImpl clientServiceImpl;
+    private InterfClientService clientServiceImpl;
 
     //-------------------Retrouver le client correspondant à un id donné--------------------------------------------------------
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)

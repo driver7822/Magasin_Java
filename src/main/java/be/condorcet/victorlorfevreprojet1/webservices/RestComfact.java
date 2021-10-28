@@ -9,6 +9,8 @@ import be.condorcet.victorlorfevreprojet1.entities.Client;
 import be.condorcet.victorlorfevreprojet1.entities.Comfact;
 import be.condorcet.victorlorfevreprojet1.services.ClientServiceImpl;
 import be.condorcet.victorlorfevreprojet1.services.ComfactServiceImpl;
+import be.condorcet.victorlorfevreprojet1.services.InterfClientService;
+import be.condorcet.victorlorfevreprojet1.services.InterfComfactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,10 +22,17 @@ import java.util.List;
 @RequestMapping("/comfacts")
 public class RestComfact {
 
+    /*
     @Autowired
     private ComfactServiceImpl comfactServiceImpl;
     @Autowired
     private ClientServiceImpl clientServiceImpl;
+    */
+
+    @Autowired
+    private InterfComfactService comfactServiceImpl;
+    @Autowired
+    private InterfClientService clientServiceImpl;
 
     //-------------------Retrouver la commande correspondant à un n° donné--------------------------------------------------------
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
